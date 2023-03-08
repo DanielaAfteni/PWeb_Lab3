@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANIELA AFTENI FAF-203</title> <!-- CHANGE THESE VALUES -->
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <!-- ADD YOUR CODE HERE -->
+    <main class="app">
+      
+      <section class="greeting">
+        <h2 class="title">
+          Enter the title of the to-do-list: <input type="text" id="name" placeholder="List title">
+        </h2>
+      </section>
+
+      <section class="create-todo">
+        <h3>The list</h3>
+        <form id="new-todo-form">
+          <h4>Add new items in the list:</h4>
+          <input type="text" placeholder="Ex: I need to present the laboratory work." name="content" id="content"/>
+          
+          <div class="options">
+            <label>
+              <input type="radio" name="importance" id="importance1" value="urgent"/> 
+              <span class="bubble urgent"></span>
+              <div>URGENT!!!</div>
+            </label>
+            <label>
+              <input type="radio" name="importance" id="importance2" value="important"/>
+              <span class="bubble important"></span>
+              <div>IMPORTANT</div>
+            </label>
+            <label>
+              <input type="radio" name="importance" id="importance3" value="notimportant"/>
+              <span class="bubble notimportant"></span>
+              <div>Not important</div>
+            </label>
+          </div>
+          <input type="submit" value="ADD"/>
+        </form>
+      </section>
+  
+      <!-- Todo List -->
+      <section class="todo-list">
+        <h3>The tasks:</h3>
+        <div class="list" id="todo-list"></div>
+        <p class="buttons">			
+          <button id="filter-done">Filter by Done</button>
+          <button id="filter-to-do">Filter by To Do</button>
+        </p>
+        <!-- <button id="filter-done">Filter by Done</button>
+        <button id="filter-to-do">Filter by To Do</button> -->
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
